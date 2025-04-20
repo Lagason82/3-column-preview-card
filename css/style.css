@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Card background color */
+    --orange-background-color:hsl(31, 77%, 52%);
+    --dark-cyan-background-color:hsl(184, 100%, 22%);
+    --super-dark-cyan-background-color:hsl(179, 100%, 13%);
+    /* Paragraph text color */
+    --paragraph-text-color:hsla(0, 0%, 100%, 0.75);
+    /* header text color */
+    --header-text-color:hsl(0, 0%, 95%);
+    /* button-background-color */
+    --btn-background-color:hsl(0, 0%, 95%);
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--header-text-color);
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 3.2rem;
+    padding: 1.5rem 0 3rem 0;
+}
+
+p {
+    color: var(--paragraph-text-color);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 8rem;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 30%;
+    display: inline-block;
+    padding: 4rem 0 1.5rem 0;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.card {
+    max-width: 28rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.left-side-card {
+    background-color: var(--orange-background-color);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.middle-card {
+    background-color: var(--dark-cyan-background-color);
+}
+
+.right-side-card {
+    background-color: var(--super-dark-cyan-background-color);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.btn {
+    display:inline-block;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    background-color: var(--btn-background-color);
+}
+
+.left-card-button {
+    color: var(--orange-background-color);
+}
+
+.middle-card-button {
+    color: var(--dark-cyan-background-color);
+}
+
+.right-card-button {
+    color: var(--super-dark-cyan-background-color);
+}
+
+@media (max-width: 46.88rem) {
+    body {
+        height: 200vh;
+    }
+    
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .left-side-card {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .right-side-card {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
